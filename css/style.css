@@ -91,11 +91,16 @@ p { line-height: 1.5em;}
 	height: 450px;
 	margin: 50px auto;
 	position: relative;
-	background: url(../imgs/card_bg.png) no-repeat center;
+	background: url(../imgs/card_texture.png) repeat-x;
+}
+#card #hello {
+	position: absolute;
+	top: -30px;
+	left: -30px;
 }
 #card #top {
 	position: absolute;
-	top: 100px;
+	top: 80px;
 	left: 100px;
 	width: 380px;
 }
@@ -119,7 +124,7 @@ p { line-height: 1.5em;}
 }
 #card #bottom {
 	position: absolute;
-	top: 260px;
+	top: 240px;
 	left: 100px;
 	width: 400px;
 }
@@ -128,6 +133,7 @@ p { line-height: 1.5em;}
 	display: block;
 	height: 50px;
 	text-indent: -1000px;
+	margin-top: 20px;
 }
 a.email {
 	display: block;
