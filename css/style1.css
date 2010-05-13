@@ -60,7 +60,7 @@ body {
 	color: #333;
 	background: url(../imgs/t5.png);
 }
-h1 { font-size: 3.5em; font-weight: bold;}
+h1 { font-size: 3.5em; font-weight: bold; text-align: center;}
 div#wraper {
 	width: 700px;
 	margin: 0 auto;
@@ -68,7 +68,7 @@ div#wraper {
 div#head {
 	margin: 170px 0 0 0;
 }
-div#head h1 { color: #eee; }
+div#head h1 { color: #1c3c40; text-shadow: 1px 1px #558186; }
 div#head h1 a { color: #ccc;}
 div#head p { font-size: 1.1em; color: #888;}
 
