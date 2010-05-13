@@ -1,0 +1,78 @@
+/*
+	reset css from yahoo yui
+*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+/* end of reset */
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+/* end of clearfix*/
+body {
+	font-family: Whitney,"Myriad Pro",MyriadPro,Helvetica,"Helvetica Neue",Arial,sans-serif;
+	font-size: 100%;
+	color: #333;
+	background: url(../imgs/t5.png);
+}
+h1 { font-size: 3.5em; font-weight: bold;}
+div#wraper {
+	width: 700px;
+	margin: 0 auto;
+}
+div#head {
+	margin: 170px 0 0 0;
+}
+div#head h1 { color: #eee; }
+div#head h1 a { color: #ccc;}
+div#head p { font-size: 1.1em; color: #888;}
+
+div#main { margin: 70px 0 0 0;}
+div#main div#card { 
+	padding: 10px; 
+}
