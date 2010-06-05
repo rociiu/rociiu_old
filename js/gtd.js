@@ -46,6 +46,11 @@ $(function(){
 	todoDB.saveToBrowser();
 	
 	$("a#add_btn").click(function(){
+		addNewItem();
+		return false;
+	});
+	
+	function addNewItem() {
 		var new_item = $("#new_item").val().replace(/,/, '');
 		todoDB.addNewItem( new_item );
 		var new_item_tag = build_new_item_tag( new_item );
@@ -58,7 +63,16 @@ $(function(){
 		todoDB.saveToBrowser();
 		$("#new_item").val('');
 		return false;
-	});
+	}
+	
+	$("input#new_item").bind("keydown", function(event) {
+	   var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+	   if (keycode == 13) { 
+	      addNewItem();
+	   }
+	   return true;
+	}); 
+	
 	
 	$("a.delete").live('click', function(){
 		var related_item = $(this).parent().find("span.item").text();
