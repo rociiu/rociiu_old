@@ -3,7 +3,7 @@
 <head>
 	<title>Get Things Done</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/gtd.css" media="all" />
 </head>
 <body>
 	<div id="page">
@@ -11,16 +11,20 @@
 			
 		</div>
 		<div id="content">
-			<a href="javascript:void(0)" class="btn">Add New Todo</a>
-			<ul>
-				<li>
-					<a href="javascript:void(0)">Get the base project setup</a>
-				</li>
+			<div class="bar">
+				<input id="new_item" type="text" /> <a href="javascript:void(0)" class="btn" id="add_btn">Add New Todo</a>
+			</div>
+			<ul id="todo_list">
 			</ul>
 		</div>
 		<div id="foot">
 
 		</div>
 	</div>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script>
+		google.load("jquery", "1.4.2");
+	</script>
+	<script type="text/javascript" src="js/gtd.js"></script>
 </body>
 </html>
