@@ -91,7 +91,7 @@ $(function(){
 		return tags.join('');
 	};
 	
-	for(var i = 0; i < todoDB.myTodos().length; i ++ ){
+	for(var i = todoDB.myTodos().length - 1; i >= 0; i -- ){
 		$("#todo_list").append(build_new_item_tag(todoDB.myTodos()[i]));
 	}
 	
