@@ -13,10 +13,10 @@ function TodoDB() {
 	
 	this.init = function(){
 		
-		if(window.localStorage['gtd_todos'] != null ) {
-			todos = window.localStorage['gtd_todos'].split(',');
-		} else {
+		if(window.localStorage['gtd_todos'] == null || window.localStorage['gtd_todos'] == '' ) {
 			todos = [];
+		} else {
+			todos = window.localStorage['gtd_todos'].split(',');
 		}
 		
 	}
