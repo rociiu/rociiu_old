@@ -71,9 +71,9 @@ $(function(){
 	
 	function build_new_item_tag(new_item) {
 		var tags = [];
-		tags.push("<li><span class='item'>");
+		tags.push("<li><a href='#' class='delete'>X</a><span class='item'>");
 		tags.push(new_item);
-		tags.push('</span><a href="#" class="delete">X</a></li>');
+		tags.push('</span></li>');
 		return tags.join('');
 	};
 	

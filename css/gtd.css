@@ -78,5 +78,22 @@ ul {
 }
 input#new_item {
 	padding: 7px 10px;
-	font-size: 1.2em;
+	font-size: 1.1em;
+	width: 350px;
+}
+a#add_btn {
+	margin-left: 20px;
+}
+span.item {
+	margin-left: 20px;
+}
+ul#todo_list {
+	margin: 30px 0;
+}
+ul#todo_list li {
+	border-bottom: 1px solid #dcdcdc;
+	padding: 15px 0;
+}
+a.delete {
+	text-decoration: none;
 }
