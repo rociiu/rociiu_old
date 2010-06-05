@@ -26,7 +26,7 @@ function TodoDB() {
 	}
 	
 	this.addNewItem = function(new_item){
-		todos.push(new_item);
+		todos.unshift(new_item);
 	};
 	
 	this.deleteItem = function(delete_item){
@@ -91,7 +91,7 @@ $(function(){
 		return tags.join('');
 	};
 	
-	for(var i = todoDB.myTodos().length - 1; i >= 0; i -- ){
+	for(var i = 0; i < todoDB.myTodos().length; i ++ ){
 		$("#todo_list").append(build_new_item_tag(todoDB.myTodos()[i]));
 	}
 	
