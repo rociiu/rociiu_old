@@ -77,8 +77,8 @@ $(function(){
 		return tags.join('');
 	};
 	
-	for(var i = 0; i < todoDB.myTodos.length; i ++ ){
-		$("#todo_list").append(build_new_item_tag(todoDB.myTodos[i]));
+	for(var i = 0; i < todoDB.myTodos().length; i ++ ){
+		$("#todo_list").append(build_new_item_tag(todoDB.myTodos()[i]));
 	}
 	
 });
