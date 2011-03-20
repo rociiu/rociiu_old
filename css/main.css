@@ -14,13 +14,13 @@ html {
 	height: 100%;
 }
 body {
-    background: none repeat scroll 0 0 #f1f1f1;
+    background: #f1f1f1;
     color: #555555;
     font-family: lucida grande,tahoma,helvetica,arial,sans-serif;
     font-size: 14px;
     line-height: 1.5;
     margin: 0;
-  	height: 100%;
+  	min-height: 100%;
 }
 #head .wraper {
   margin: 0 auto;
@@ -81,6 +81,18 @@ body {
   font-weight: bold;
   color: #333;
 }
+#post_content ul {
+  margin: 5px 0 10px 0;
+}
+#post_content ul li {
+  margin: 5px 0;
+}
+#post_content img {
+  margin: 10px 0;
+}
+#post_content strong {
+  font-weight: bold;
+}
 #projects {
   margin: 30px 0;
 }
@@ -91,4 +103,9 @@ body {
 }
 #projects ul li {
   margin:  0 0 10px 0 ;
+}
+#foot {
+  padding: 40px 0 30px 0;
+  text-align: center;
+  font-size: 0.8em;
 }
