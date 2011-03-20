@@ -1,0 +1,94 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.3.0
+build: 3167
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+a {
+  color: #8a0917;
+}
+html {
+	height: 100%;
+}
+body {
+    background: none repeat scroll 0 0 #f1f1f1;
+    color: #555555;
+    font-family: lucida grande,tahoma,helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  	height: 100%;
+}
+#head .wraper {
+  margin: 0 auto;
+  width: 760px;
+  padding: 50px 0 10px 0;
+}
+#head .wraper ul li {
+  display: inline;
+  padding: 0 15px 0 0;
+}
+#head .wraper ul li a {
+  font-weight: bold;
+  text-decoration: none;
+}
+#intro {
+  margin: 15px 0 50px 0;
+}
+#intro h3 {
+  color: #000;
+  font-weight: bold;
+}
+#intro p {
+  margin-top: 10px;
+}
+#content .wraper {
+  margin: 0 auto;
+  width: 760px;
+}
+#posts {
+  margin: 30px 0 0 0;
+  border-top: 2px solid #ccc;
+}
+#posts ul li {
+  margin: 10px 0;
+}
+#posts ul li a {
+  margin-left: 20px;
+}
+#content .post {
+  margin: 20px 0;
+}
+#content .post h1 {
+  font-weight: bold;
+  color: #111;
+  font-size: 15px;
+}
+#content .post h4 {
+  font-size: 12px;
+  margin: 10px 0 20px 10px;
+}
+#post_content {
+  line-height: 150%;
+}
+#post_content p {
+  margin: 0 0 15px 0;
+}
+#post_content h2 {
+  font-weight: bold;
+  color: #333;
+}
+#projects {
+  margin: 30px 0;
+}
+#projects h3 {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #111;
+}
+#projects ul li {
+  margin:  0 0 10px 0 ;
+}
