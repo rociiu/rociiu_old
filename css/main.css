@@ -1,73 +1,94 @@
-html { height: 100%; }
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.3.0
+build: 3167
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+a {
+  color: #8a0917;
+}
+html {
+	height: 100%;
+}
 body {
-    height: 100%;
+    background: none repeat scroll 0 0 #f1f1f1;
+    color: #555555;
+    font-family: lucida grande,tahoma,helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
     margin: 0;
-    font-family: helvetica, sans-serif;
-    -webkit-text-size-adjust: none;
+  	height: 100%;
 }
-
-body {
-    -webkit-background-size: 100% 21px;
-    background-color: #c5ccd3;
-    background-image:
-        -webkit-gradient(linear, left top, right top,
-            color-stop(.75, transparent),
-            color-stop(.75, rgba(255,255,255,.1)) );
-    -webkit-background-size: 7px;
+#head .wraper {
+  margin: 0 auto;
+  width: 760px;
+  padding: 50px 0 10px 0;
 }
-
-.view {
-    min-height: 100%;
-    overflow: auto;
+#head .wraper ul li {
+  display: inline;
+  padding: 0 15px 0 0;
 }
-
-.header-wrapper {
-    height: 44px;
-    font-weight: bold;
-    text-shadow: rgba(0,0,0,0.7) 0 -1px 0;
-    border-top: solid 1px rgba(255,255,255,0.6);
-    border-bottom: solid 1px rgba(0,0,0,0.6);
-    color: #fff;
-    background-color: #8195af;
-    background-image:
-        -webkit-gradient(linear, left top, left bottom,
-            from(rgba(255,255,255,.4)),
-            to(rgba(255,255,255,.05)) ),
-        -webkit-gradient(linear, left top, left bottom,
-            from(transparent),
-            to(rgba(0,0,64,.1)) );
-    background-repeat: no-repeat;
-    background-position: top left, bottom left;
-    -webkit-background-size: 100% 21px, 100% 22px;
-    -webkit-box-sizing: border-box;
+#head .wraper ul li a {
+  font-weight: bold;
+  text-decoration: none;
 }
-.header-wrapper h1 {
-    text-align: center;
-    font-size: 20px;
-    line-height: 44px;
-    margin: 0;
+#intro {
+  margin: 15px 0 50px 0;
 }
-
-.group-wrapper {
-    margin: 9px;
+#intro h3 {
+  color: #000;
+  font-weight: bold;
 }
-
-.group-wrapper h2 {
-    color: #4c566c;
-    font-size: 17px;
-    line-height: 0.8;
-    font-weight: bold;
-    text-shadow: #fff 0 1px 0;
-    margin: 20px 10px 12px;
+#intro p {
+  margin-top: 10px;
 }
-
-.group-wrapper p {
-    background-color: #fff;
-    -webkit-border-radius: 10px;
-    font-size: 17px;
-    line-height: 20px;
-    margin: 9px 0 20px;
-    border: solid 1px #a9abae;
-    padding: 11px 9px 12px;
+#content .wraper {
+  margin: 0 auto;
+  width: 760px;
 }
-
+#posts {
+  margin: 30px 0 0 0;
+  border-top: 2px solid #ccc;
+}
+#posts ul li {
+  margin: 10px 0;
+}
+#posts ul li a {
+  margin-left: 20px;
+}
+#content .post {
+  margin: 20px 0;
+}
+#content .post h1 {
+  font-weight: bold;
+  color: #111;
+  font-size: 15px;
+}
+#content .post h4 {
+  font-size: 12px;
+  margin: 10px 0 20px 10px;
+}
+#post_content {
+  line-height: 150%;
+}
+#post_content p {
+  margin: 0 0 15px 0;
+}
+#post_content h2 {
+  font-weight: bold;
+  color: #333;
+}
+#projects {
+  margin: 30px 0;
+}
+#projects h3 {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #111;
+}
+#projects ul li {
+  margin:  0 0 10px 0 ;
+}
