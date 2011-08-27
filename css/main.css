@@ -10,11 +10,14 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 a {
   color: #8a0917;
 }
+.clear {
+  clear: both;
+}
 html {
 	height: 100%;
 }
 body {
-    background: #f1f1f1;
+    background: #464646;
     color: #555555;
     font-family: lucida grande,tahoma,helvetica,arial,sans-serif;
     font-size: 14px;
@@ -22,10 +25,19 @@ body {
     margin: 0;
   	min-height: 100%;
 }
+#head {
+  margin-bottom: 50px;
+}
 #head .wraper {
   margin: 0 auto;
-  width: 760px;
+  width: 800px;
   padding: 50px 0 10px 0;
+}
+#head .wraper ul {
+  float: right;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 #head .wraper ul li {
   display: inline;
@@ -34,6 +46,40 @@ body {
 #head .wraper ul li a {
   font-weight: bold;
   text-decoration: none;
+}
+#main {
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 800px;
+  margin: 0 auto;
+}
+#slogan {
+  background: #39ace7;
+  padding: 50px 60px;
+}
+#apps {
+  
+}
+#apps h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px 0;
+}
+#apps .app {
+  float: left;
+  width: 320px;
+}
+#apps .app h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#apps .app .pictures {
+  margin-bottom: 20px;
+}
+#slogan h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
 }
 #intro {
   margin: 15px 0 50px 0;
