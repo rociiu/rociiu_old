@@ -76,6 +76,10 @@ body {
 #apps .app .pictures {
   margin-bottom: 20px;
 }
+#apps .app a img {
+  width: 168px;
+  height: 57px;
+}
 #slogan h2 {
   font-size: 30px;
   font-weight: bold;
