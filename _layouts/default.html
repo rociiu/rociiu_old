@@ -8,6 +8,13 @@ sitetitle: Roc Yu
     <meta charset="utf-8" />
     <meta name="author" content="Roc Yu" />
     <title>{{ page.title }} | {{ page.sitetitle }}</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script>
+  		!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+  	</script>
+    <script type="text/javascript" src="/js/jquery.mousewheel-3.0.4.pack.js"></script>
+  	<script type="text/javascript" src="/js/jquery.fancybox-1.3.4.pack.js"></script>
+  	<link rel="stylesheet" type="text/css" href="/css/jquery.fancybox-1.3.4.css" media="screen" />
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/main.js"></script>
 </head>
@@ -51,6 +58,13 @@ sitetitle: Roc Yu
             <p>Copyright &copy; Roc Yu 2011</p>
        </div>
     </div>
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+        $("a#images1").fancybox();
+        $("a#images2").fancybox();
+        $("a#images3").fancybox();
+      });
+    </script>
     <script type="text/javascript" charset="utf-8">
         var _gaq = _gaq || [];
   	  _gaq.push(['_setAccount', 'UA-7581425-4']);
