@@ -2,45 +2,51 @@
 layout: default
 title: Home
 ---
-<div id="apps">
-  <h2>APPS I MADE</h2>
-  <div class="inquotes">
-    <h3>inQuotes</h3>
-    <div id="content">
-      <a id="images1" href="/images/image1.png"><img alt="images1" src="/images/thumb1.jpg" /></a>
-      <a id="images2" href="/images/image2.png"><img alt="images1" src="/images/thumb2.jpg" /></a>
-      <a id="images3" href="/images/image3.png"><img alt="images1" src="/images/thumb3.jpg" /></a>
-    </div>
-    <div>
-      <a href="http://itunes.apple.com/cn/app/inquotes/id488611832?mt=8"><img width="168" height="57" src="/images/app_store.png"/></a>
-    </div>
-  </div>
-  <div class="app">
-    <h3>购车计算器</h3>
-    <div class="pictures">
-      <img src="/images/buycarcal.png" />
-    </div>
-    <div class="link">
-      <p><a href="http://itunes.apple.com/us/app/id459376393"><img src="/images/app_store.png"/></a></p>
-    </div>
-  </div>
-  <div class="app">
-    <h3>油价器</h3>
-    <div class="pictures">
-      <img src="/images/gasprice.png" />
-    </div>
-    <div class="link">
-      <p><a href="http://itunes.apple.com/us/app/id459418888"><img src="/images/app_store.png"/></a></p>
-    </div>
-  </div>
-  <div class="clear"></div>
-</div>
-<div id="posts">
+<div id="home">
+  <span class="top">Hello</span>
+  <h1>I build web(ruby/rails) and ios apps. </h1>
+  <h2>Contractor at <a href="http://intridea.com">intridea.com</a></h2>
+  <div id="apps">
+    <h2>iOS Apps I made</h2>
     <ul>
-        {% for post in site.posts %}
-            <li>
-                <span class="date">{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }}</a> 
-            </li>
-        {% endfor %}
+      <li>
+	<a href="http://itunes.apple.com/us/app/id459418888">
+	  <span>GasPrice</span>
+	  <img src="http://a3.mzstatic.com/us/r1000/089/Purple/55/20/93/mzm.khzidefe.175x175-75.jpg" alt="" />
+	</a>
+      </li>
+      <li>
+	<a href="http://itunes.apple.com/us/app/id459376393">
+	  <span>BuyCarCal</span>
+	  <img src="http://a1.mzstatic.com/us/r1000/067/Purple/03/91/91/mzm.ophirxua.175x175-75.jpg" alt="" />
+	</a>
+      </li>
+      <li>
+	<a href="http://itunes.apple.com/cn/app/inquotes/id488611832?mt=8">
+	  <span>inQuotes</span>
+	  <img src="http://a4.mzstatic.com/us/r1000/082/Purple/42/44/af/mzm.eipkeanq.175x175-75.jpg" alt="" />
+	</a>
+      </li>
     </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="sites">
+    <p>I developed and maintaining <a href="http://gemnotifier.org/">GemNotifier.com</a></p> 
+  </div>
+  <div class="projects">
+    <h2>Open Source projects</h2>
+    <ul>
+	<li><a href="https://github.com/intridea/gemnotifier">GemNotifier</a></li>
+	<li><a href="https://github.com/rociiu/face">Face Gem(A ruby wrapper of face.com api)</a></li>
+	<li><a href="https://github.com/rociiu/jquery.placeholder">jquery.placeholder</a></li>
+    </ul>
+  </div>
+  <div class="social">
+    <h2>Where you can reach me</h2>
+    <ul>
+      <li><a href="mailto:rociiu.yu@gmail.com">rociu.yu # gmail.com</a></li>
+      <li><a href="http://twitter.com/uiicor">@uiicor</a></li>
+      <li><a href="http://github.com/rociiu">rociiu@github</a></li>
+    </ul>
+  </div>
 </div>
