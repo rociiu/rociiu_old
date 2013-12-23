@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>WebRTC</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <style type="text/css">
-      /* Slideshow styles */
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
     </style>
   </head>
   <body>
@@ -12,19 +15,277 @@
 
 class: center, middle
 
-# Title
+# A introduction of WebRTC
 
 ---
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+* Introduction
+* Who is using webRTC
+* History
+* Support
+* API
+* Signaling
+* Libraries
+* Some code
+* Links
 
 ---
 
 # Introduction
+
+WebRTC is a free, open project that enables web browsers with Real-Time Communications (RTC) capabilities via simple JavaScript APIs. The WebRTC components have been optimized to best serve this purpose. 
+
+> *Real-time communication without plugins*
+
+**Vision of WebRTC**: To enable rich, high quality, RTC applications to be developed in the browser via simple JavaScript APIs and HTML5. 
+
+RTC == Real-time communication
+
+---
+
+# Who is using webRTC
+
+* http://workor.com
+
+
+* http://peercdn.com
+
+
+* https://talky.io
+
+* https://www.sharefest.me
+
+---
+
+# History
+
+Historically, RTC has been corporate and complex, requiring expensive audio and video technologies to be licensed or developed in house. Integrating RTC technology with existing content, data and services has been difficult and time consuming, particularly on the web.
+
+Google bought GIPS, a company which had developed many components required for RTC, such as codecs and echo cancellation techniques. Google open sourced the technologies developed by GIPS and engaged with relevant standards bodies at the IETF and W3C to ensure industry consensus. In May 2011, Ericsson built the first implementation of WebRTC.
+
+Need of WebRTC
+
+1. Many web services already use RTC, but need downloads, native apps or plugins. These includes GTM, Skype, Facebook (which uses Skype) and Google Hangouts (which use the Google Talk plugin).
+
+2. Downloading, installing and updating plugins can be complex, error prone and annoying.
+
+3. Plugins can be difficult to deploy, debug, troubleshoot, test and maintain—and may require licensing and integration with complex, expensive technology. It's often difficult to persuade people to install plugins in the first place!
+
+
+
+---
+
+# Support
+
+
+*  Chrome
+
+*  Firefox
+
+---
+
+**Architecture**
+
+![Default-aligned image](imgs/webrtc_architecture.png)
+
+---
+
+# API
+
+* **MediaStream** (aka getUserMedia)
+
+* **RTCPeerConnection**
+
+* **RTCDataChannel**
+
+
+**MediaStream**
+
+getUserMedia is available in **Chrome**, **Opera** and **Firefox**.
+
+get access to data streams, such as from the user's camera and microphone.
+
+Prompts the user for permission to use a media device such as a camera or microphone. If the user provides permission, the successCallback is invoked on the calling application with a LocalMediaStream object as its argument.
+
+
+```javascript
+
+  navigator.getUserMedia ( constraints, successCallback, errorCallback );
+
+```
+   
+***RTCPeerConnection***
+
+is in Chrome (on desktop and for Android) and in Firefox. A word of explanation about the name: after several iterations, RTCPeerConnection is currently implemented by Chrome as webkitRTCPeerConnection and by Firefox as mozRTCPeerConnection. 
+
+audio or video calling, with facilities for encryption and bandwidth management.
+
+**RTCDataChannel** is supported by Chrome 25 and Firefox 22 and above.
+
+peer-to-peer communication of generic data.
+
+---
+
+# Signaling
+
+![Default-aligned image](imgs/apprtcArchitecture.png)
+
+---
+
+# SDP
+
+```
+v=0
+o=- 7869727081101082279 2 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE audio video
+a=msid-semantic: WMS ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJw
+m=audio 1 RTP/SAVPF 111 103 104 0 8 106 105 13 126
+c=IN IP4 0.0.0.0
+a=rtcp:1 IN IP4 0.0.0.0
+a=ice-ufrag:IwEyIG0tPQYfRWLG
+a=ice-pwd:s4aJrCiiOIfmnhvSpOdJMQJR
+a=ice-options:google-ice
+a=fingerprint:sha-256 99:6D:48:5B:D4:E3:FA:E7:A7:E1:BF:FA:14:3D:B6:31:E7:04:B3:71:44:17:84:2E:2F:FE:0F:E4:E5:67:DC:AC
+a=setup:actpass
+a=mid:audio
+a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+a=sendrecv
+a=rtcp-mux
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:lz+9M/we0hsUQgx20HdHEx7BAC37WfU/Oa0MLaau
+a=rtpmap:111 opus/48000/2
+a=fmtp:111 minptime=10
+a=rtpmap:103 ISAC/16000
+a=rtpmap:104 ISAC/32000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:106 CN/32000
+a=rtpmap:105 CN/16000
+a=rtpmap:13 CN/8000
+a=rtpmap:126 telephone-event/8000
+a=maxptime:60
+a=ssrc:846380570 cname:Z9dfZZtwCNZqgcsG
+a=ssrc:846380570 msid:ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJw ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJwa0
+a=ssrc:846380570 mslabel:ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJw
+a=ssrc:846380570 label:ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJwa0
+m=video 1 RTP/SAVPF 100 116 117
+c=IN IP4 0.0.0.0
+a=rtcp:1 IN IP4 0.0.0.0
+a=ice-ufrag:IwEyIG0tPQYfRWLG
+a=ice-pwd:s4aJrCiiOIfmnhvSpOdJMQJR
+a=ice-options:google-ice
+a=fingerprint:sha-256 99:6D:48:5B:D4:E3:FA:E7:A7:E1:BF:FA:14:3D:B6:31:E7:04:B3:71:44:17:84:2E:2F:FE:0F:E4:E5:67:DC:AC
+a=setup:actpass
+a=mid:video
+a=extmap:2 urn:ietf:params:rtp-hdrext:toffset
+a=extmap:3 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+a=sendrecv
+a=rtcp-mux
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:lz+9M/we0hsUQgx20HdHEx7BAC37WfU/Oa0MLaau
+a=rtpmap:100 VP8/90000
+a=rtcp-fb:100 ccm fir
+a=rtcp-fb:100 nack
+a=rtcp-fb:100 goog-remb
+a=rtpmap:116 red/90000
+a=rtpmap:117 ulpfec/90000
+a=ssrc:1861957502 cname:Z9dfZZtwCNZqgcsG
+a=ssrc:1861957502 msid:ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJw ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJwv0
+a=ssrc:1861957502 mslabel:ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJw
+a=ssrc:1861957502 label:ZSTwePYMrD8A89pZQfyq1vZxkmV56VdUdQJwv0
+
+```
+
+---
+
+# peer to peer
+
+WebRTC as currently implemented only supports **one-to-one communication**, but could be used in more complex network scenarios: for example, with multiple peers each communicating each other directly, peer-to-peer, or via a Multipoint Control Unit (MCU), a server that can handle large numbers of participants and do selective stream forwarding, and mixing or recording of audio and video.
+
+---
+
+![Default-aligned image](imgs/mcu.png)
+
+---
+
+# Libraries
+
+* https://code.google.com/p/webrtc/source/browse/trunk/samples/js/base/adapter.js
+
+* https://github.com/HenrikJoreteg/SimpleWebRTC
+
+---
+
+# Code
+
+```html
+  <video/>
+```
+
+```javascript
+
+  navigator.getUserMedia = navigator.getUserMedia 
+    || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+  var constraints = {video: true};
+
+  function successCallback(stream) {
+    window.stream = stream; // stream available to console
+    var video = document.querySelector("video");
+    video.src = window.URL.createObjectURL(stream);
+    video.play();
+  }
+
+  function errorCallback(error){
+    console.log("navigator.getUserMedia error: ", error);
+  }
+
+  navigator.getUserMedia(constraints, successCallback, errorCallback);
+
+
+```
+---
+
+```javascript
+  var pc = new webkitRTCPeerConnection(servers,
+    {optional: [{RtpDataChannels: true}]});
+
+  pc.ondatachannel = function(event) {
+    receiveChannel = event.channel;
+    receiveChannel.onmessage = function(event){
+      document.querySelector("div#receive").innerHTML = event.data;
+    };
+  };
+
+  sendChannel = pc.createDataChannel("sendDataChannel", {reliable: false});
+
+  document.querySelector("button#send").onclick = function (){
+    var data = document.querySelector("textarea#send").value;
+    sendChannel.send(data);
+  };
+```
+
+---
+
+# Links
+
+* https://www.youtube.com/watch?v=p2HzZkd2A40
+
+* http://www.webrtc.org
+
+* http://www.html5rocks.com/en/tutorials/webrtc/basics/
+
+* https://bitbucket.org/webrtc/codelab
+
+* http://dev.w3.org/2011/webrtc/editor/webrtc.html
+
+---
+
+class: center, middle
+
+# Thanks!
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-0.5.9.min.js" type="text/javascript">
